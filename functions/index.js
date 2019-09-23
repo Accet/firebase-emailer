@@ -17,7 +17,7 @@ const mailTransport = nodemailer.createTransport({
 exports.sendContactMessage = functions.firestore.document('messages/{uid}').onCreate(async snap => {
     const val = snap.data();
     const mailOptions = {
-        to: 'egvission@gmail.com',
+        to: 'tatyana.arkhypchuk@gmail.com',
         subject: val.subject ? `Portfolio. ${val.subject}` : `Portfolio. Message from ${val.name}`,
         html: val.html
     };
